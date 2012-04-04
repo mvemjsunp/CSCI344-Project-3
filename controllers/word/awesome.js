@@ -1,3 +1,4 @@
+
 //used to retrieve awesome link data from Redis
 
 var redis = require('redis');
@@ -21,24 +22,34 @@ exports.index = function(req, res) {
 	}
 
 	//pull top link to send via topAwesomeLink
-    topLinkString += "<a href='" + results[0] + "'>" + results[0] + "</a>"; 
+    topLinkString += "<a href='" + results[0] + "' target='blank'>" + results[0] + "</a>"; 
 
   //pull score from top link to send via topAwesomeLinkNumTweets
     topLinkNumTweets = results[1];
 
 	//pull remaining links and attach to responseString
     for (var i = 2 ; i < limit ; i++) {
-		  if (i%2 == 0){
-			 responseString += "<a href='" + results[i] + "'>" + results[i] + "'</a>";
-		   }
-      
-		  else if (i%2 == 1){
-        if (results[i] > 1){
-			     responseString += " (Tweeted <font color='#000'>" + results[i] + "<font color='#3cb3b5'> times!) <br /><br />";
-         }
-        else if (results[i] = 1){
-          responseString += " (Tweeted just once.) <br />";
-        }
+      if (results[i] != "null"){ //test for null' link
+      		  if (i%2 == 0){
+              if (results[i].length > 40){
+                //if string length is greater than, add "..."
+      			     responseString += "<a href='" + results[i] + "' target='_blank'>" + results[i].substring(0,40)  + "...</a>";
+              }
+              else {
+                responseString += "<a href='" + results[i] + "' target='_blank'>" + results[i].substring(0,40)  + "</a>";
+                  
+              }
+
+             }
+            
+      		  else if (i%2 == 1){
+              if (results[i] > 1 && results[i-1] != "null"){
+      		   responseString += " (Tweeted <font color='#000'>" + results[i] + "<font color='#3cb3b5'> times!) <br /><br />";
+               }
+              else if (results[i] = 1 && results[i-1] != "null"){
+                responseString += " (Tweeted just once.) <br />";
+              }
+            }
 		  }
      
     }
@@ -48,3 +59,5 @@ exports.index = function(req, res) {
   });
 
 };
+
+
