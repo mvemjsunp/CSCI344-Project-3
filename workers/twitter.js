@@ -18,7 +18,7 @@ var twitter = new twitter({
 
 twitter.stream(
 	'statuses/filter', //return statuses that match tracked keywords
-	
+
 	{track: [word]}, //track tweets that contain keywords defined in variable
 
 	function(stream){
@@ -43,10 +43,8 @@ twitter.stream(
 				catch (error) {
 				}
 
-				
-					
+
+
 		});
 	}
 );
-
-
