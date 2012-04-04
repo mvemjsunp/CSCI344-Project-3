@@ -1,0 +1,248 @@
+body {
+	margin: 0; 
+	padding: 0;
+	background-color: #fff;
+	}
+
+body {
+	font-size: 12px;
+	line-height: 18px;
+	font-family: verdana, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: none;
+	color: #000;
+	}
+
+/* ------------------------------------------------------------------ */
+
+a:link {
+	font:				19px verdana, sans-serif;
+	text-decoration:	none; 
+	color:				#000;
+	}
+	
+a:visited {
+	font:				19px verdana, sans-serif; 
+	text-decoration:	none; 
+	color:				#000;
+	}
+
+a:hover {
+	font:				19px verdana, sans-serif;
+	text-decoration:	underline;
+	color:				#d82027;
+	}
+	
+a:active {
+	font:				19px verdana, sans-serif;
+	text-decoration:	none; 
+	color:				#d82027;
+	}
+	
+#container {
+	width: auto;
+}
+	
+#redcontainer {
+	position: absolute;
+	border-width: 8px;
+	border-style: solid;
+	border-radius: 5em;
+	width: 80%;
+	height: 80%;
+	top: 75px;
+	left: 50px;
+	border-color: #d82027;
+	z-index: 2000;
+}
+
+#logo {
+	position: absolute;
+	top: -70px;
+	left: 40px;
+	z-index: 5000;
+}
+
+#topcontainer {
+
+}
+
+#searchcontainer {
+	width: 55%;
+	height: 75%;
+	position: absolute;
+	top: 8px;
+	border-style: none solid none none;
+	border-width: 2px;
+	border-color: #d82027;	
+}
+
+#searchbox {
+	position: absolute;
+	top: 40%;
+	left: 5%;
+}
+
+#searchbox p {
+	font-size: 30px;
+	line-height:35px;
+	text-align: center;
+	color: #d82027;
+}
+
+#resultscontainer {
+	width: 45%;
+	height: 68%;
+	position: relative;
+	top: 5px;
+	right: 5px;
+	left: 55%;
+}
+
+#toplink {
+	position: absolute;
+	top: 5px;
+	left: 15px;
+	right: 10px;
+	color: #d82027;
+	font-size: 20px;
+	border-style: none none solid none;
+	border-width: 4px;
+	border-color: #d82027;
+}
+
+#linkurltop {
+	position: relative;
+	top: 0px;
+	right: 5px;
+	left: 25px;
+	color: #f0f;
+}
+
+#linkurltop a:link {
+	font-weight: bold;
+	font-size: 26px;
+	color: #d82027;
+}
+
+#runnersuphead {
+	position: relative;
+	top: 125px;
+	left: 15px;
+	height: 50%;
+	font-weight: bold;
+	font-style: italic;
+	color: #3cb3b5;
+	font-size: 16px;
+
+}
+
+#numtop {
+	font-size: 24px;
+	font-color: #000;
+}
+
+#linkurlothers {
+	position: absolute;
+	height: 400px;
+	margin: 0px 0px 200px 0px;
+	right: 5px;
+	left: 25px;
+	top: 140px;
+	font-size: 16px;
+	line-height: 16px;
+	color: #3cb3b5;
+	overflow: hidden;
+}
+
+#linkurlothers p {
+	color: #000;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 16px;
+	font-weight: 200;
+}
+
+#footer {
+	display: block;
+	background-color: #3cb3b5;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 50px;
+	z-index: 1000;
+	color: #fff;
+}
+
+#footer p {
+	position: relative;
+	top: -5px;
+	left: 100px;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 5px;
+}
+
+#starleft {
+	position: absolute;
+	left: 20px;
+	top: 25px;
+}
+
+#starright {
+	position: absolute;
+	right: 225px;
+	top: 25px;
+}
+
+.btn {
+	cursor:pointer;
+	display:inline-block;
+	background-color:#d82027;
+	background-repeat:no-repeat;
+	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#d82027), color-stop(25%, #d82027), to(#861015));
+	background-image:-webkit-linear-gradient(#d82027, #d82027 25%, #861015);
+	background-image:-moz-linear-gradient(top, #d82027, #d82027 25%, #861015);
+	background-image:-ms-linear-gradient(#d82027, #d82027 25%, #861015);
+	background-image:-o-linear-gradient(#d82027, #d82027 25%, #861015);
+	background-image:linear-gradient(#d82027, #d82027 25%, #861015);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d82027', endColorstr='#d82027', GradientType=0);
+	padding:2px 14px 3px;
+	text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
+	color:#fff;
+	font-size:20px;
+	line-height:normal;
+	border:1px solid #ccc;
+	border-bottom-color:#bbb;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-transition:0.1s linear all;
+	-moz-transition:0.1s linear all;
+	-ms-transition:0.1s linear all;
+	-o-transition:0.1s linear all;
+	transition:0.1s linear all;
+}
+
+.btn:link {
+	color: #fff;
+	font-style: italic;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.btn:hover {
+	background-position:0 -15px;
+	color:#333;
+	text-decoration:none;
+}
+
+.moveover {
+	position: absolute;
+	margin: 20px;
+	top: 70%;
+	left: 35%;
+}
